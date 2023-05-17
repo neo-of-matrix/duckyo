@@ -1,0 +1,29 @@
+{
+  "name": "duckyo",
+  "version": "0.0.0",
+  "description": "a framework starter, all frameworks can be created and inited by it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neo-of-matrix/duckyo.git"
+  },
+  "keywords": [
+    "react",
+    "framework",
+    "vue"
+  ],
+  "authors": [
+    "neo <neo_of_matrix@126.com> (https://github.com/neo-of-matrix)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neo-of-matrix/duckyo/issues"
+  },
+  "homepage": "https://github.com/neo-of-matrix/duckyo#readme",
+  "bin": {
+    "duckyo": "index.js"
+  }
+}
