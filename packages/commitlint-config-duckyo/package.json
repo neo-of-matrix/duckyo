@@ -1,0 +1,25 @@
+{
+  "name": "commitlint-config-duckyo",
+  "version": "0.0.0",
+  "description": "git commit 规范",
+  "author": "Duckyo <duckyo0308@126.com>",
+  "homepage": "https://github.com/neo-of-matrix/duckyo#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neo-of-matrix/duckyo.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/commitlint-config-duckyo.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/neo-of-matrix/duckyo/issues"
+  },
+  "devDependencies": {
+    "conventional-changelog-conventionalcommits": "^7.0.2"
+  }
+}

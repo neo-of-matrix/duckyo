@@ -1,29 +1,38 @@
 {
   "name": "duckyo",
-  "version": "0.0.0",
-  "description": "a framework starter, all frameworks can be created and inited by it.",
-  "main": "index.js",
+  "private": true,
+  "description": "todo",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install && dumi setup",
+    "init": "pnpm install",
+    "clean": "lerna clean && rm -rf node_modules",
+    "test": "lerna run test",
+    "deploy": "bash deploy.sh",
+    "publish": "lerna publish",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "docs:dev": "dumi dev",
+    "docs:build": "dumi build"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/neo-of-matrix/duckyo.git"
+  "lint-staged": {
+    "*.{md,json}": [
+      "prettier --write --no-error-on-unmatched-pattern"
+    ]
   },
-  "keywords": [
-    "react",
-    "framework",
-    "vue"
-  ],
-  "authors": [
-    "neo <neo_of_matrix@126.com> (https://github.com/neo-of-matrix)"
-  ],
+  "keywords": [],
+  "author": "Duckyo <duckyo0308@126.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/neo-of-matrix/duckyo/issues"
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "dumi": "^2.2.14",
+    "husky": "^8.0.3",
+    "lerna": "^7.4.2",
+    "lint-staged": "^15.1.0",
+    "prettier": "3.1.0",
+    "rimraf": "^5.0.5"
   },
-  "homepage": "https://github.com/neo-of-matrix/duckyo#readme",
-  "bin": {
-    "duckyo": "index.js"
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }

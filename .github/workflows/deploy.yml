@@ -1,0 +1,31 @@
+name: Build and Deploy
+on:
+    push:
+        branches:
+            - main
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: lock npm version
+              uses: actions/setup-node@v4
+              with:
+                  node-version: lts/*
+
+            - name: Install and Build
+              run: |
+                  npm i -g pnpm
+                  pnpm run init
+                  pnpm run docs:build
+              env:
+                  NODE_OPTIONS: '--max_old_space_size=4096'
+
+            - name: Deploy
+              uses: JamesIves/github-pages-deploy-action@v4
+              with:
+                  BRANCH: gh-pages
+                  FOLDER: dist
+                  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
