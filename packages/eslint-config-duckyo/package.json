@@ -1,0 +1,48 @@
+{
+  "name": "eslint-config-duckyo",
+  "version": "0.0.0",
+  "description": "JavaScript TypeScript Node 规范",
+  "keywords": [
+    "javaScript",
+    "typescript",
+    "node",
+    "lint"
+  ],
+  "author": "Duckyo <duckyo0308@126.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neo-of-matrix/duckyo.git"
+  },
+  "scripts": {
+    "lint": "eslint ./",
+    "test": "jest",
+    "print-config": "eslint --print-config ./index.js > ./print-config.json"
+  },
+  "bugs": {
+    "url": "https://github.com/neo-of-matrix/duckyo/issues"
+  },
+  "homepage": "https://github.com/neo-of-matrix/duckyo#readme",
+  "devDependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/eslint-parser": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
+    "eslint": "^8.54.0",
+    "eslint-config-egg": "^13.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-jsx-plus": "^0.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "jest": "^29.7.0",
+    "lodash": "^4.17.21",
+    "typescript": "^5.3.2"
+  }
+}
