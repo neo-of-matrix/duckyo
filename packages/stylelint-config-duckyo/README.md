@@ -1,13 +1,15 @@
-# markdownlint-config-encode
+# markdownlint-config-duckyo
 
 支持配套的 [stylelint 可共享配置](https://stylelint.io/user-guide/configure)。
 
 ## 安装
 
-需要先行安装 [stylelint](https://www.npmjs.com/package/stylelint) 和 [stylelint-scss](https://www.npmjs.com/package/stylelint-scss)：
+需要先行安装 [stylelint](https://www.npmjs.com/package/stylelint) 和 [stylelint-scss](https://www.npmjs.com/package/stylelint-scss)
+
+新版本需要使用 [postcss-scss](https://github.com/postcss/postcss-scss) 或 [postcss-less](https://github.com/shellscape/postcss-less)
 
 ```bash
-npm install stylelint-config-encode stylelint stylelint-scss --save-dev
+npm install stylelint-config-duckyo stylelint stylelint-scss postcss-scss postcss-less --save-dev
 ```
 
 ## 使用
@@ -16,6 +18,6 @@ npm install stylelint-config-encode stylelint stylelint-scss --save-dev
 
 ```json
 {
-  "extends": "stylelint-config-encode"
+  "extends": "stylelint-config-duckyo"
 }
 ```
