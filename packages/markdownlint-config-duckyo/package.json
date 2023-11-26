@@ -15,9 +15,6 @@
     "type": "git",
     "url": "git+https://github.com/neo-of-matrix/duckyo.git"
   },
-  "scripts": {
-    "test": "node ./__tests__/markdownlint-config-duckyo.test.js"
-  },
   "bugs": {
     "url": "https://github.com/neo-of-matrix/duckyo/issues"
   },

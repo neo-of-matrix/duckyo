@@ -1,7 +1,7 @@
 module.exports = {
-  plugins: ['eslint-plugin-encode'],
+  plugins: ['eslint-plugin-duckyo'],
   rules: {
-    'eslint-plugin-encode/no-http-url': 'warn',
-    'eslint-plugin-encode/no-secret-info': 'error',
+    'eslint-plugin-duckyo/no-http-url': 'warn',
+    'eslint-plugin-duckyo/no-secret-info': 'error',
   },
 };
