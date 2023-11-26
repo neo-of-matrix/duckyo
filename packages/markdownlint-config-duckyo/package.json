@@ -1,0 +1,28 @@
+{
+  "name": "markdownlint-config-duckyo",
+  "version": "0.0.0",
+  "description": "markdownlint 文档规范",
+  "keywords": [
+    "markdown"
+  ],
+  "author": "Duckyo <duckyo0308@126.com>",
+  "license": "MIT",
+  "main": "index.json",
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neo-of-matrix/duckyo.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/markdownlint-config-duckyo.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/neo-of-matrix/duckyo/issues"
+  },
+  "homepage": "https://github.com/neo-of-matrix/duckyo#readme",
+  "devDependencies": {
+    "markdownlint": "^0.32.1"
+  }
+}

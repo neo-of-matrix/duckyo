@@ -20,7 +20,7 @@ group:
 
 ### 1.2. 基本的 `message` 格式
 
-```
+```plainText
 <type>[optional scope]: <subject>
 
 [optional body]
@@ -81,7 +81,7 @@ group:
 
 如果是 `monorepo` 的项目，`scope` 取值可以是 `subpackage` 的名称。例如 `babel` 项目中对某个 `package` 的修改：
 
-```
+```plainText
 chore(babel-helper-plugin-utils): add npmignore
 ```
 
@@ -91,7 +91,7 @@ subject 用来概括和描述本次提交的改动内容，需注意以下几点
 
 1. 时态方面使用一般现在时，不要使用过去时。虽然查看 `message` 时，`message` 内容本身都发生在过去，然而对于主题来说，使用现在时的时态更简洁明确，并且更易达成一致性：
 
-   ```
+   ```plainText
    // good
    docs: delete redundant docs
 
@@ -101,7 +101,7 @@ subject 用来概括和描述本次提交的改动内容，需注意以下几点
 
 2. 句式使用祈使句。即一般情况不要增加主语。因为在绝大情况下，主语都是作者『我』：
 
-   ```
+   ```plainText
    // good
    docs: delete redundant docs
 
@@ -111,13 +111,13 @@ subject 用来概括和描述本次提交的改动内容，需注意以下几点
 
 3. 句首无需大写，句尾无需结束标点。因为主题（或标题）本身不用形成完整的句子：
 
-````
-  // good
-  docs: delete redundant docs
+   ```plainText
+   // good
+   docs: delete redundant docs
 
-  // bad
-  docs: Delete redundant docs.
-  ```
+   // bad
+   docs: Delete redundant docs.
+   ```
 
 ### 1.4. message body
 
@@ -131,12 +131,12 @@ subject 用来概括和描述本次提交的改动内容，需注意以下几点
 
 footer 通常用于代码评审过程记录、作者签名等。例如：
 
-```markdown
+```plainText
 Reported-by: User1 <user1@example.com>
 Helped-by: User2 <user2@example.com>
 Reviewed-by: User3 <user3@example.com>
 Signed-off-by: Author <author@example.com>
-````
+```
 
 > 为什么要有签名区？
 >
@@ -148,7 +148,7 @@ Signed-off-by: Author <author@example.com>
 
 可以在 `commit` 信息里使用关键字 + `Issue ID`（`Gitlab` / `Github` 或其他平台的），来表明该提交解决了某个 `Issue`。推荐使用的关键字有：
 
-```markdown
+```plainText
 close
 closes
 closed
@@ -168,7 +168,7 @@ resolved
 
 关闭多个 `Issues` 使用如下格式:
 
-```
+```plainText
 Close #1, #2, #3
 Close #1, close #2, close #3
 
@@ -183,7 +183,7 @@ Resolve #1, close #2, close #3
 
 如果本次提交的改动是破坏性的，需要在这里声明：
 
-```
+```plainText
 BREAKING CHANGE: 为了组件 API 规范的统一，本次升级将 size 属性的 value 值从 `s|m|l` 替换为 `small|medium|large`。
 
 请按照如下方式升级：

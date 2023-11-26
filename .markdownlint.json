@@ -1,0 +1,4 @@
+{
+  "extends": "./packages/markdownlint-config-duckyo/index.json",
+  "MD025": false
+}
