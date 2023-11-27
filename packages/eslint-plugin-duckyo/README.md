@@ -4,7 +4,7 @@
 
 除了本包，你需要同时安装 [ESlint](https://eslint.org/)
 
-```shell
+```bash
 npm install eslint-plugin-duckyo eslint --save-dev
 ```
 

@@ -5,7 +5,7 @@ hero:
   description: 支持前端全部生态，无需关注环境，支持直接使用
   actions:
     - text: 立刻进入 →
-      link: /project
+      link: /coding/html
 features:
   - title: 全面的前端生态
     emoji: 💎
@@ -28,9 +28,17 @@ features:
 
 我们引入了多个业界流行的 `Linter` 作为规范文档的配套工具，并根据规范内容定制了对应的规则包，它们包括：
 
-| 规范     | Lint 工具                               | NPM 包                                                                             |
-| -------- | --------------------------------------- | ---------------------------------------------------------------------------------- |
-| Git 规范 | [commitlint](https://commitlint.js.org) | [commitlint-config-duckyo](https://www.npmjs.com/package/commitlint-config-duckyo) |
+| 规范                                                              | Lint 工具                                                      | npm 包                                                                                 |
+| ----------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| JavaScript 编码规范 <br/> TypeScript 编码规范 <br/> Node 编码规范 | [ESLint](https://eslint.org/)                                  | [eslint-config-duckyo](https://www.npmjs.com/package/eslint-config-duckyo)             |
+| CSS 编码规范                                                      | [stylelint](https://stylelint.io/)                             | [stylelint-config-duckyo](https://www.npmjs.com/package/stylelint-config-duckyo)       |
+| Git 规范                                                          | [commitlint](https://commitlint.js.org/#/)                     | [commitlint-config-duckyo](https://www.npmjs.com/package/commitlint-config-duckyo)     |
+| 文档规范                                                          | [markdownlint](https://github.com/DavidAnson/markdownlint)     | [markdownlint-config-duckyo](https://www.npmjs.com/package/markdownlint-config-duckyo) |
+| Eslint 插件                                                       | [ESlint Plugin](https://eslint.org/docs/latest/extend/plugins) | [eslint-plugin-duckyo](https://www.npmjs.com/package/eslint-plugin-duckyo)             |
+
+[duckyo](https://www.npmjs.com/package/duckyo) 收敛屏蔽了上述依赖和配置细节，提供简单的 `CLI` 和 `Node.js API`，让项目能够一键接入、一键扫描、一键修复、一键升级，并为项目配置 git commit 卡口，降低项目接入规范的成本。
+
+您可以使用 [duckyo](https://www.npmjs.com/package/duckyo) 方便地为项目接入全部规范。
 
 ## ✉️ 联系
 

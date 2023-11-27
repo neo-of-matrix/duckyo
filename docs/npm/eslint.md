@@ -1,12 +1,19 @@
+---
+nav: NPM 包
+order: 1
+---
+
 # eslint-config-duckyo
 
-> JavaScript TypeScript 规范
+:::tip
+JavaScript TypeScript Node 规范
+:::
 
-提供了多套配置文件以支持 `JavaScript`、`TypeScript`、`React` 等多种项目类型。
+提供了多套配置文件以支持 `JavaScript`、`TypeScript`、`React`、`Vue`、`Node.js` 等多种项目类型。
 
-## JavaScript 项目 - eslint-config-duckyo
+## eslint-config-duckyo
 
-针对未使用 `React` 的原生 `JavaScript` 项目，使用 `ESLint` 原生规则和 [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import) 规则，使用 [@babel/eslint-parser](https://www.npmjs.com/package/@babel/eslint-parser) 作为 `parser`，是本包的默认配置。
+针对未使用 `React` 或 `Vue` 的原生 `JavaScript` 项目，使用 `ESLint` 原生规则和 [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import) 规则，使用 [@babel/eslint-parser](https://www.npmjs.com/package/@babel/eslint-parser) 作为 `parser`，是本包的默认配置。
 
 ### 依赖
 
@@ -28,7 +35,7 @@ npm i -D eslint-config-duckyo @babel/core @babel/eslint-parser eslint-plugin-imp
 }
 ```
 
-## JavaScript + React 项目 - eslint-config-duckyo/react
+## eslint-config-duckyo/react
 
 针对 JS React 项目，继承了默认配置，并启用了 [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) 和 [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks) 的规则。
 
@@ -67,9 +74,60 @@ npm i -D eslint-plugin-jsx-a11y
 }
 ```
 
-## TypeScript 项目 - eslint-config-duckyo/typescript
+## eslint-config-duckyo/vue
 
-针对未使用 `React` 的 `TypeScript` 项目，继承了默认配置，并启用了 [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin) 插件的规则，使用 [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser) 作为 parser。
+针对 `JS Vue` 的项目，继承了默认配置，并启用了 [eslint-plugin-vue](https://www.npmjs.com/package/eslint-plugin-vue) 插件的规则，使用 [vue-eslint-parser](https://www.npmjs.com/package/vue-eslint-parser) 作为 parser。
+
+### 依赖
+
+- [@babel/core](https://www.npmjs.com/package/@babel/core)@^7.16.0
+- [@babel/eslint-parser](https://www.npmjs.com/package/@babel/eslint-parser)@^7.16.3
+- [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)@^2.25.3
+- [vue-eslint-parser](https://www.npmjs.com/package/vue-eslint-parser)@^7.0.0
+- [eslint-plugin-vue](https://www.npmjs.com/package/eslint-plugin-vue)@^7.3.0
+
+### 安装
+
+```bash
+npm i -D eslint-config-duckyo @babel/core @babel/eslint-parser eslint-plugin-import vue-eslint-parser eslint-plugin-vue
+```
+
+### 配置
+
+```json
+{
+  "extends": ["eslint-config-duckyo/vue"]
+}
+```
+
+## eslint-config-duckyo/node
+
+针对 Node.js 项目，继承了默认配置和 [eslint-config-egg 的规则](https://github.com/eggjs/eslint-config-egg/blob/master/lib/rules/node.js)，规则由 ESLint 原生规则和 [eslint-plugin-node](https://github.com/mysticatea/eslint-plugin-node) 提供。
+
+### 依赖
+
+- [@babel/core](https://www.npmjs.com/package/@babel/core)@^7.16.0
+- [@babel/eslint-parser](https://www.npmjs.com/package/@babel/eslint-parser)@^7.16.3
+- [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)@^2.25.3
+- [eslint-config-egg](https://www.npmjs.com/package/eslint-config-egg)@^10.0.0
+
+### 安装
+
+```bash
+npm i -D eslint-config-duckyo @babel/core @babel/eslint-parser eslint-plugin-import eslint-config-egg
+```
+
+### 配置
+
+```json
+{
+  "extends": ["eslint-config-duckyo/node"]
+}
+```
+
+## eslint-config-duckyo/typescript
+
+针对未使用 `React` 或 `Vue` 的 `TypeScript` 项目，继承了默认配置，并启用了 [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin) 插件的规则，使用 [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser) 作为 parser。
 
 ### 依赖
 
@@ -103,7 +161,7 @@ npm i -D eslint-config-duckyo @typescript-eslint/parser @typescript-eslint/eslin
 }
 ```
 
-## TypeScript + React 项目 - eslint-config-duckyo/typescript/react
+## eslint-config-duckyo/typescript/react
 
 针对 `TS React` 项目，继承了 `JS React` 的配置，并启用了 [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin) 插件的规则，使用 [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser) 作为 parser。
 
@@ -146,6 +204,59 @@ npm i -D  eslint-plugin-jsx-a11y
 }
 ```
 
+## eslint-config-duckyo/typescript/vue
+
+针对 `TS Vue` 项目，继承了 `JS Vue` 的配置，并启用了 [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin) 插件的规则，使用 [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser) 作为 `parser`。
+
+### 依赖
+
+- [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser)@^5.0.0
+- [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin)@^5.0.0
+- [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)@^2.25.3
+- [eslint-import-resolver-typescript](https://www.npmjs.com/package/eslint-import-resolver-typescript)@2
+- [vue-eslint-parser](https://www.npmjs.com/package/vue-eslint-parser)@^7.0.0
+- [eslint-plugin-vue](https://www.npmjs.com/package/eslint-plugin-vue)@^7.3.0
+
+### 安装
+
+```bash
+npm i -D eslint-config-duckyo @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-import eslint-import-resolver-typescript vue-eslint-parser eslint-plugin-vue
+```
+
+### 配置
+
+```json
+{
+  "extends": ["eslint-config-duckyo/typescript/vue"]
+}
+```
+
+## eslint-config-duckyo/typescript/node
+
+针对未使用 `React` 和 `Vue` 的 `TypeScript(Node)` 项目，继承了 `JS Node.js` 配置，并启用了 [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin) 插件的规则，使用 [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser) 作为 parser。
+
+### 依赖
+
+- [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser)@^5.0.0
+- [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin)@^5.0.0
+- [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)@^2.25.3
+- [eslint-import-resolver-typescript](https://www.npmjs.com/package/eslint-import-resolver-typescript)@2
+- [eslint-config-egg](https://www.npmjs.com/package/eslint-config-egg)@^10.0.0
+
+### 安装
+
+```bash
+npm i -D eslint-config-duckyo @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-import eslint-import-resolver-typescript eslint-config-egg
+```
+
+### 配置
+
+```json
+{
+  "extends": ["eslint-config-duckyo/typescript/node"]
+}
+```
+
 ## 配合 Prettier 使用
 
 如果你的项目使用 [Prettier](https://prettier.io/) 进行代码格式化，本包的一些规则可能会跟 Prettier 格式化结果有冲突，[例如这条规则](https://github.com/typescript-eslint/typescript-eslint/issues/372)。为了避免冲突，你需要手动安装 [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) 和 [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)：
@@ -170,7 +281,7 @@ npm install --save-dev eslint-config-prettier eslint-plugin-prettier
 
 ## 将风格问题降级
 
-为了保证一致的编码风格，本包中大量风格相关的规则被设为了 `error` 级别，以引起开发者的足够重视。如果你觉得风格问题不足以是 `error` 级别（有些用户根据 ESLint error 进行流程卡点），本包还提供了一套名为 'essential' 的配置文件，这套配置将所有风格问题降级为 `warn` 级别，仅将必要问题报告为 `error`，引用方式为在相应配置的 `eslint-config-duckyo` 后面加上 `/essential`，如对 `JS React` 项目为 `eslint-config-duckyo/essential/react`、对 `TS React` 项目为 `eslint-config-duckyo/essential/typescript/react`
+为了保证一致的编码风格，本包中大量风格相关的规则被设为了 `error` 级别，以引起开发者的足够重视。如果你觉得风格问题不足以是 `error` 级别（有些用户根据 ESLint error 进行流程卡点），本包还提供了一套名为 'essential' 的配置文件，这套配置将所有风格问题降级为 `warn` 级别，仅将必要问题报告为 `error`，引用方式为在相应配置的 `eslint-config-duckyo` 后面加上 `/essential`，如对 `JS React` 项目为 `eslint-config-duckyo/essential/react`、对 `TS Vue` 项目为 `eslint-config-duckyo/essential/typescript/vue`
 
 ## 了解更多
 
