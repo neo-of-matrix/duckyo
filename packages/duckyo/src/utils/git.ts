@@ -1,11 +1,10 @@
-import { execa } from 'execa';
-import type { Options } from 'execa';
+import execa from 'execa';
 
 /**
  * 获取此次 commit 修改的文件列表
  * @param options
  */
-export const getCommitFiles = async (options: Options = {}): Promise<string[]> => {
+export const getCommitFiles = async (options: execa.Options = {}): Promise<string[]> => {
   try {
     const { stdout } = await execa(
       'git',
@@ -33,7 +32,7 @@ export const getCommitFiles = async (options: Options = {}): Promise<string[]> =
  * 获取未 add 的修改文件数量
  * @param options
  */
-export const getAmendFiles = async (options: Options = {}): Promise<string> => {
+export const getAmendFiles = async (options: execa.Options = {}): Promise<string> => {
   try {
     const { stdout } = await execa(
       'git',

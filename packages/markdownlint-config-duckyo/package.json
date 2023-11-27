@@ -9,7 +9,7 @@
   "license": "MIT",
   "main": "index.json",
   "publishConfig": {
-    "registry": "https://registry.npmmirror.com/"
+    "registry": "https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
