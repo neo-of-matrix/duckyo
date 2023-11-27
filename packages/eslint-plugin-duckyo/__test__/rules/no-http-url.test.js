@@ -8,23 +8,23 @@ const ruleTester = new RuleTester();
 ruleTester.run('no-http-url', rule, {
   valid: [
     {
-      code: "var test = 'https://chenghuai.com';",
+      code: "var test = 'https://www.baidu.com';",
     },
   ],
 
   invalid: [
     {
-      code: "var test = 'http://chenghuai.com';",
-      output: "var test = 'http://chenghuai.com';",
+      code: "var test = 'http://www.baidu.com';",
+      output: "var test = 'http://www.baidu.com';",
       errors: [
         {
-          message: 'Recommended "http://chenghuai.com" switch to HTTPS',
+          message: 'Recommended "http://www.baidu.com" switch to HTTPS',
         },
       ],
     },
     {
-      code: "<img src='http://chenghuai.com' />",
-      output: "<img src='http://chenghuai.com' />",
+      code: "<img src='http://www.baidu.com' />",
+      output: "<img src='http://www.baidu.com' />",
       parserOptions: {
         ecmaFeatures: {
           jsx: true,
@@ -32,7 +32,7 @@ ruleTester.run('no-http-url', rule, {
       },
       errors: [
         {
-          message: 'Recommended "http://chenghuai.com" switch to HTTPS',
+          message: 'Recommended "http://www.baidu.com" switch to HTTPS',
         },
       ],
     },

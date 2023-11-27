@@ -6,7 +6,7 @@
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky install && dumi setup",
     "init": "pnpm install",
-    "clean": "lerna clean && rm -rf node_modules",
+    "clean": "lerna clean && rimraf node_modules",
     "test": "lerna run test",
     "test:stylelint": "lerna run --scope stylelint-config-duckyo test",
     "test:eslint-config": "lerna run --scope eslint-config-duckyo test",
